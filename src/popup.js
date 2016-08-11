@@ -1,4 +1,4 @@
-import MapboxGl from "mapbox-gl/dist/mapbox-gl";
+import MapboxGl from "mapbox-gl";
 import React, { Component, PropTypes } from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 
