@@ -4,6 +4,11 @@ Forked from https://github.com/alex3165/react-mapbox-gl
 
 Changed import statements of 'mapbox-gl' to enable server side rendering.
 
+The samples in the example folder might not be working with these changes. The library works though.
+If using webpack remember the necessary configuration:
+
+    https://github.com/mapbox/mapbox-gl-js#using-mapbox-gl-js-with-webpack
+
 ![London cycle example gif](london-cycle-example.gif "London cycle example gif")
 
 Based on [mapbox-gl-js](https://www.mapbox.com/mapbox-gl-js/api/) this library aim to bring the api to a React friendly way with some additional extra behavior.
@@ -26,17 +31,17 @@ The library include the following elements :
 ## How to start
 
 ```
-npm install react-mapbox-gl --save
+npm install tf-react-mapbox-gl --save
 ```
 
 Import the component :
 
 ```
 // ES6
-import ReactMapboxGl, { Layer, Feature } from "react-mapbox-gl";
+import ReactMapboxGl, { Layer, Feature } from "tf-react-mapbox-gl";
 
 // ES5
-var ReactMapboxGl = require("react-mapbox-gl");
+var ReactMapboxGl = require("tf-react-mapbox-gl");
 var Layer = ReactMapboxGl.Layer;
 var Feature = ReactMapboxGl.Feature;
 ```
@@ -55,20 +60,5 @@ var Feature = ReactMapboxGl.Feature;
 
 > Change the example by replacing the example component in `example/main.js` file.
 
-## Notes
-
-Mapbox throw a warning because react-mapbox-gl is using a compiled version of mapbox-gl which is necessary when using webpack for now as long as the sources files requires the node package `fs` to read the shaders.
-
-## Import mapbox css file
-
-If you are using webpack we advise you to use [style-loader and css-loader](https://webpack.github.io/docs/stylesheets.html) and require mapbox css file when needed, check london-cycle for more information. React-mapbox-gl include a revisited version of mapbox-gl.css file but you can definitely use the original css file as well. Though if you want to use our custom css file you can import it like this (assuming we are in a webpack environment) :
-
-```
-// ES6
-import MapboxCSS from "react-mapbox-gl/dist/mapbox-css/mapbox-gl.css";
-
-// ES5
-require("react-mapbox-gl/dist/mapbox-css/mapbox-gl.css");
-```
 
 ## [API](docs/API.md)
