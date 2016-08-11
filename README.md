@@ -1,5 +1,9 @@
 # react-mapbox-gl
 
+Forked from https://github.com/alex3165/react-mapbox-gl
+
+Changed import statements of 'mapbox-gl' to enable server side rendering.
+
 ![London cycle example gif](london-cycle-example.gif "London cycle example gif")
 
 Based on [mapbox-gl-js](https://www.mapbox.com/mapbox-gl-js/api/) this library aim to bring the api to a React friendly way with some additional extra behavior.
